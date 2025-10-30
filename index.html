@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="claseAlumno.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <h1>Gestión de Alumnos</h1>
+
+    <section>
+        <h2>Crear nuevo alumno</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="apellido" placeholder="Apellido">
+        <input type="text" id="dni" placeholder="DNI">
+        <input type="email" id="mail" placeholder="Email">
+        <input type="text" id="carrera" placeholder="Carrera">
+        <input type="number" id="anio" placeholder="Año">
+        <button onclick="crearAlumno()">Crear alumno</button>
+    </section>
+
+    <section>
+        <h2>Agregar materia</h2>
+        <input type="text" id="materia" placeholder="Materia">
+        <button onclick="agregarMateria()">Agregar</button>
+    </section>
+
+    <section>
+        <h2>Cambiar todas las materias</h2>
+        <input type="text" id="materiasNuevas" placeholder="Separadas por coma">
+        <button onclick="cambiarMaterias()">Actualizar</button>
+    </section>
+
+    <section>
+        <h2>Mostrar información</h2>
+        <button onclick="mostrarInfo()">Ver datos del alumno</button>
+        <pre id="salida"></pre>
+    </section>
+</body>
+
+</html>
