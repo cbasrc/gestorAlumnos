@@ -53,3 +53,17 @@ class Desarrollo2 extends Desarrollo1 {
         }
     }
 }
+const section = document.getElementsById('crearAlumno');
+const alumnodiv = document.getElementsById('info');
+let alumnos = JSON.parse(localStorage.getItem('alumnos')) || [];
+function mostrar () {
+    alumnodiv.innerHTML = '';
+    alumnos.forEach((alumno) => {
+        const div = document.createElement('div');
+        div.classList.add('alumno');
+        div.textContent = new Desarrollo2(alumno.nombre, alumno.apellido, alumno.DNI, alumno.mail, alumno.carrera, alumno.año).presentarse();
+        alumnodiv.appendChild(div);
+    });
+    
+
+}
