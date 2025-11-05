@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Alumnos</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="claseAlumno.js"></script>
-    <script src="main.js" defer></script>
 </head>
-
 <body>
     <h1>Gestión de Alumnos</h1>
-
-    <section id="crearAlumno">
-        <h2>Crear nuevo alumno</h2>
-        <input type="text" id="nombre" placeholder="Nombre">
-        <input type="text" id="apellido" placeholder="Apellido">
-        <input type="text" id="dni" placeholder="DNI">
-        <input type="email" id="mail" placeholder="Email">
-        <input type="text" id="carrera" placeholder="Carrera">
-        <input type="number" id="anio" placeholder="Año">
-        <button onclick="crearAlumno()">Crear alumno</button>
-    </section>
-
-    <section>
-        <h2>Agregar materia</h2>
-        <input type="text" id="materia" placeholder="Materia">
-        <button onclick="agregarMateria()">Agregar</button>
-    </section>
-
-    <section>
-        <h2>Cambiar todas las materias</h2>
-        <input type="text" id="materiasNuevas" placeholder="Separadas por coma">
-        <button onclick="cambiarMaterias()">Actualizar</button>
-    </section>
-
-    <div id="info">
-        <h2>Mostrar información</h2>
-        <button onclick="mostrarInfo()">Ver datos del alumno</button>
-        <pre id="salida"></pre>
+    
+    <div class="container">
+        <div class="section">
+            <h2>INGRESO DE ALUMNO</h2>
+            <form id="alumnoForm">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="text" id="dni" placeholder="DNI" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="carrera" placeholder="Carrera" required>
+                <select id="anio" required>
+                    <option value="">Año</option>
+                    <option value="1">1° Año</option>
+                    <option value="2">2° Año</option>
+                    <option value="3">3° Año</option>
+                </select>
+                <button type="submit">Crear alumno</button>
+            </form>
+        </div>
+        
+        <div class="section">
+            <h2>MATERIAS</h2>
+            <div id="materiasContainer"></div>
+        </div>
+        
+        <div class="section full-width">
+            <h2>MOSTRAR INFORMACIÓN</h2>
+            <div class="info">
+                <h3>Datos del alumno</h3>
+                <div id="datosAlumno">No hay datos</div>
+                
+                <h3>Materias</h3>
+                <div id="materiasSeleccionadas">No hay materias</div>
+            </div>
+        </div>
     </div>
-</body>
 
+    <script src="claseAlumno.js"></script>
+</body>
 </html>
