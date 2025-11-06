@@ -67,7 +67,10 @@ class GestorAlumnos {
             "Física",
             "Química",
             "Historia",
-            "Geografía"
+            "Geografía",
+            "Proyecto de Investigación",
+            "Psicología",
+            "Arte"
         ];
     }
 
