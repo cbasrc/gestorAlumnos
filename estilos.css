@@ -30,6 +30,7 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 20px;
 }
 
 .full-width {
@@ -87,7 +88,7 @@ button:hover {
 
 .materia-tag {
     display: inline-block;
-    background: #3498db;
+    background: #2a8bcc;
     color: white;
     padding: 4px 8px;
     border-radius: 12px;
